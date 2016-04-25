@@ -2,8 +2,8 @@ var gulp = require('gulp');
 var server = require( 'gulp-develop-server' );
 
 var PATHS = {
-    clientSrc: 'client/src/**/*.ts',
-    svrSrc: 'server/**/*.js'
+    clientSrc: 'client/src/*.ts',
+    svrSrc: 'server/*.js'
 };
 
 gulp.task('clean', function (done) {
@@ -22,25 +22,14 @@ gulp.task('ts2js', function () {
     return tsResult.js.pipe(gulp.dest('client/dist'));
 });
 
-gulp.task('server', function (cb) {
-  server.listen( { path: './server/app.js' });
+gulp.task('server:restart', function (cb) {
+  server.restart();
 });
 
-gulp.task('play', ['server','ts2js'], function () {
-    // var http = require('http');
-    // var connect = require('connect');
-    // var serveStatic = require('serve-static');
-    // var open = require('open');
-
-    // var port = 9000, app;
-
-    //gulp.watch(PATHS.clientSrc, ['ts2js']);
-    //gulp.watch(PATHS.svrSrc, ['server']);
-
-    // app = connect().use(serveStatic(__dirname));
-    // http.createServer(app).listen(port, function () {
-    //     open('http://localhost:' + port);
-    // });
+gulp.task('play', ['ts2js'], function () {
+    gulp.watch(PATHS.clientSrc, ['ts2js']);
+    gulp.watch(PATHS.svrSrc, ['server:restart']);
+    server.listen( { path: './server/app.js' });
 });
 
 gulp.task('default', ['play']);
