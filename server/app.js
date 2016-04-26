@@ -9,8 +9,8 @@ var http = require('http');
 var app = express();
 var router = express.Router();
 var authenticate = jwt({
-  secret: new Buffer('Es0kX75mOWii94sFKJ067G4USFAuMxPuu_Y1AdGFHWIE9RUb-IuaocsILcLel85h', 'base64'),
-  audience: 'ULSWdMVxjbf9WFGBSNbMB5vkdjhZdEie'
+  secret: new Buffer('Client Secret', 'base64'),
+  audience: 'Client ID'
 });
 
 app.use(cors());
