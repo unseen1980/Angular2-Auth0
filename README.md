@@ -16,3 +16,14 @@
 0. Visit http://www.localhost:3001
 0. Enjoy!
 
+# Todo
+
+0. Add livereload
+1. Split app.ts in separate files
+
+# Credits
+
+0. Todd Motto, https://toddmotto.com/angular-2-authentication
+1. Auth0 blog, https://auth0.com/docs/quickstart/spa/angular2/no-api
+2. Ionic blog, http://blog.ionic.io/ionic-2-and-auth0/
+
