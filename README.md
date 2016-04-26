@@ -1,4 +1,4 @@
-# A working example of Auth0 authentication service in Angular2.
+# Example of Auth0 authentication service in Angular2 + Nodejs + Express.
 
 0. Backend: **NodeJS, express, express-jwt**
 0. Frontend: **Angular2, Typescript, Bootstrap**
