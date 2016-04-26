@@ -14,6 +14,7 @@
 0. Edit variable lock in client/src/app.ts with your keys
 0. Run gulp play
 0. Visit http://www.localhost:3001
+0. Check console in developer tools for responses
 0. Enjoy!
 
 # Todo
