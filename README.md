@@ -28,3 +28,7 @@
 1. Auth0 blog, https://auth0.com/docs/quickstart/spa/angular2/no-api
 2. Ionic blog, http://blog.ionic.io/ionic-2-and-auth0/
 
+## License
+
+The content of this project is licensed under the [MIT license](http://opensource.org/licenses/mit-license.php).
+
